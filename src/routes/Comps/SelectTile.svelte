@@ -1,6 +1,9 @@
 <script>
 
-    export let title = "default", img="#",add_ons = [{item_name: "cinnamon", price: 10.0}, {item_name: "sugar", price: 10.0}, {item_name: "cool-whip", price: 10.0}], price="5" 
+    export let title = "default", 
+               img="#",
+               add_ons = [{item_name: "cinnamon", price: 10.0}, {item_name: "sugar", price: 10.0}, {item_name: "cool-whip", price: 10.0}], 
+               price="5"; 
 
 </script>
 
