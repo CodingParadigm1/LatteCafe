@@ -2,8 +2,23 @@
 
     export let title = "default", 
                img="#",
-               add_ons = [{item_name: "cinnamon", price: 10.0}, {item_name: "sugar", price: 10.0}, {item_name: "cool-whip", price: 10.0}], 
-               price="5"; 
+               add_ons = [
+                        {
+                            "name":"Caramel",
+                            "price": 10.0
+
+                        }, 
+                        {
+                            "name":"Choc Syrup",
+                            "price": 10.0
+
+                        }, 
+                        {
+                            "name":"Cool Whip",
+                            "price": 10.0
+
+                        },  
+                    ]; 
 
 </script>
 
@@ -12,7 +27,7 @@
     <img src={img} alt="#">
     
     <article>
-        <span>
+        <span style="margin-top:15px;">
             {title}
         </span>
         <section>
@@ -20,7 +35,7 @@
                 {#each add_ons as item}
                     <li>
                         <span style="margin-left:5px;">
-                            {item.item_name}
+                            {item.name}
                         </span>
                         <span style="margin-right:5px;">
                             {item.price}
@@ -39,6 +54,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         height:75%;
         width:35%;
         min-width: 100px;
@@ -46,7 +62,7 @@
         border-radius:7px;
         padding:5px;
         gap:20px;
-        background-color: white;
+        background-image: radial-gradient(rgb(40, 38, 38), 95%,turquoise);
         color:black;
     }
 
@@ -104,6 +120,7 @@
 
     span{
         font-size: 12px;
+        color:white;
     }
 
 </style>

@@ -9,24 +9,57 @@
         {
           "title": "Caramel", 
           "pic": "cafe.jpg", 
+          add_ons:[
+              {
+                  "name":"Caramel",
+                  "price": 10.0
+              }, 
+              {
+                  "name":"Choc Syrup",
+                  "price": 10.0
+              }, 
+              {
+                  "name":"Cool Whip",
+                  "price": 10.0
+
+              },  
+          ],
+          "item_reference": "3472IA", 
           "price": 10, 
           "index": 0
         },{
-          "title": "Pumpkin Spice", 
+          "title": "Pmpkn Spice", 
           "pic": "pumpkin.jpg", 
-          "price": 5.75,
+          add_ons:[
+              {
+                  "name":"Pmkn Spice",
+                  "price": 10.0
+
+              }, 
+              {
+                  "name":"Cinnamon",
+                  "price": 10.0
+
+              }, 
+              {
+                  "name":"Cool Whip",
+                  "price": 10.0
+
+              },  
+          ],
+          item_reference: "3472BA",
+          "price": 5,
           "index": 1
         }
     ];
 
     let selected_coffee = 0; 
-
     $: chosen_coffee = coffee_choices[selected_coffee];
-
+    $: console.log(chosen_coffee.item_reference); 
 </script>
 
 <main>
-  <SelectTile/>
+  <SelectTile title={chosen_coffee.title} add_ons={chosen_coffee.add_ons} img={chosen_coffee.pic}/>
   <Combos>
     <ul>
       {#each coffee_choices as choice}
@@ -43,7 +76,7 @@
       {/each}
     </ul>
   </Combos>
-  <KnownCombos/>
+  <KnownCombos item_ref={chosen_coffee.item_reference}/>
 </main>
 
 
@@ -59,7 +92,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: rgb(40, 38, 38);;
+    background-color: rgb(40, 38, 38);
     list-style: none;
     width:100%;
     min-width:200px;

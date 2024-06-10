@@ -1,5 +1,7 @@
 <script>
-    export let title = "", pic = "", price=0.0; 
+    export let title = "", 
+                pic = "", 
+                price=0.0; 
 </script>
 
 <main>
@@ -35,7 +37,7 @@
     }
 
     main:hover{
-        margin-left:30px;
+        margin-left:-30px;
         margin-right:15px;
     }
 
@@ -43,7 +45,7 @@
         margin-right:-15px;
     }
     main:nth-child(1):hover{
-        margin-right:30px;
+        margin-right:10px;
     }
 
     img{
